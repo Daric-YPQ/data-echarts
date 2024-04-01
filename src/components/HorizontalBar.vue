@@ -46,7 +46,7 @@ const renderChart = () => {
             axisTick: {
                 show: false
             },
-            axisLable: {
+            axisLabel: {
                 color: '#9eb1c8'
             }
         },
@@ -55,7 +55,7 @@ const renderChart = () => {
             right: 0,
             bottom: 0,
             left: 0,
-            containLable: true // 计算位置的时候，将标签作为图表整体去设置位置
+            containLabel: true // 计算位置的时候，将标签作为图表整体去设置位置
         },
         // 核心配置
         series: [
@@ -76,7 +76,7 @@ const renderChart = () => {
                     shadowBlur: 5
                 },
                 barWidth: 12,
-                lable: {
+                label: {
                     show: true,
                     position: 'right',
                     textStyle: {
