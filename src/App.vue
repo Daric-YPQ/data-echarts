@@ -11,7 +11,7 @@ import WordCloud from './components/WordCloud.vue'
 import { getVisualization} from './api/visualization.js'
 import { ref } from 'vue'
 
-const data = ref()
+const data = ref(null)
 const loadData = async() => {
 	data.value = await getVisualization()
 	console.log(data.value)

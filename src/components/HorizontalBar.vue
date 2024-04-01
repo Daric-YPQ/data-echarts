@@ -16,11 +16,12 @@ const props = defineProps({
         required: true
     }
 })
-// console.log(props.data)
+console.log(props.data.regions)
 
 // 1、初始化echarts图表
-let myChart = null
 const target = ref(null)
+let myChart = null
+
 onMounted(() => {
     myChart = echarts.init(target.value) // 创建echarts实例
     renderChart()
@@ -38,7 +39,8 @@ const renderChart = () => {
         },
         yAxis: {
             type: 'category',
-            data: props.data.regions.map( (item) => item.name ),
+            data: props.data.regions.map((item) => item.name),
+            // data: props.data.regions.map( (item) => item.name ),
             inverse: true,
             axisLine: {
                 show: false
@@ -46,7 +48,7 @@ const renderChart = () => {
             axisTick: {
                 show: false
             },
-            axisLable: {
+            axisLabel: {
                 color: '#9eb1c8'
             }
         },
@@ -55,16 +57,16 @@ const renderChart = () => {
             right: 0,
             bottom: 0,
             left: 0,
-            containLable: true // 计算位置的时候，将标签作为图表整体去设置位置
+            containLabel: true // 计算位置的时候，将标签作为图表整体去设置位置
         },
         // 核心配置
         series: [
             {
                 type: 'bar',
-                data: props.data.regions.map( (item) => ({
-                    name: item.name,
-                    value: item.value
-                })),
+				data: props.data.regions.map((item) => ({
+					name: item.name,
+					value: item.value
+				})),
                 showBackground: true,
                 backgroundColor: {
                     color: 'rbga(180, 180, 180, 0.2)'
@@ -76,7 +78,7 @@ const renderChart = () => {
                     shadowBlur: 5
                 },
                 barWidth: 12,
-                lable: {
+                label: {
                     show: true,
                     position: 'right',
                     textStyle: {
