@@ -35,7 +35,7 @@ loadData()
 		<MapChart class="bg-opacity-50 bg-slate-800 p-3 mt-2 flex-1" />
 	</div>
 	<div class="flex-1 bg-opacity-50 bg-slate-800 p-3 flex flex-col">
-		<VerticalBar class="h-1/3 box-border pb-4" />
+		<VerticalBar class="h-1/3 box-border pb-4" :data="data.serverData"/>
 		<RingBar class="h-1/3 box-border pb-4" />
 		<WordCloud class="h-1/3 box-border" />
 	</div>
