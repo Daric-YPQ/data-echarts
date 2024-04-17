@@ -1,8 +1,7 @@
 <template>
     <div>
         <div>【地区数据信息】</div>
-        <div ref="target" class="w-full h-full">
-        </div>
+        <div ref="target" class="w-full h-full"></div>
     </div>
 </template>
 
