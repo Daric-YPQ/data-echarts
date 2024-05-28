@@ -27,7 +27,7 @@ loadData()
   <div class="bg-[url('assets/imgs/bg.jpg')] bg-cover bg-center h-screen text-white p-2 flex overflow-hidden">
 	<div class="flex-1 mr-2 bg-opacity-50 bg-slate-800 p-3 flex flex-col">
 		<HorizontalBar class="h-1/3 box-border pb-4" :data="data.regionData"/>
-		<RadarBar class="h-1/3 box-border pb-4" />
+		<RadarBar class="h-1/3 box-border pb-4" :data="data.riskData"/>
 		<Relation class="h-1/3" />
 	</div>
 	<div class="w-1/2 mr-2 flex flex-col">
@@ -39,7 +39,7 @@ loadData()
 		<RingBar class="h-1/3 box-border pb-4" />
 		<WordCloud class="h-1/3 box-border" />
 	</div>
-</div>
+	</div>
 </template>
 
 <style scoped>
