@@ -9,12 +9,14 @@
 import { onMounted, ref, watch } from 'vue'
 import * as echarts from 'echarts'
 
+// 组件通信传值
 const props = defineProps({
 	data: {
 		type: Object,
 		required: true
 	}
 })
+console.log(props.data.regions)
 
 // 获取 dom 实例
 const target = ref(null)
