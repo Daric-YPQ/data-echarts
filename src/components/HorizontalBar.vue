@@ -113,12 +113,12 @@ const options = {
 }
 
 // 监听数据的变化，重新渲染图表
-// watch(
-// 	() => props.data,
-// 	() => {
-// 		renderChart()
-// 	}
-// )
+watch(
+	() => props.data,
+	() => {
+		myChart.setOption(options)
+	}
+)
 </script>
 
 <style lang="scss" scoped></style>
